@@ -1,0 +1,5 @@
+= DbAppConfig
+
+Super simple project to store app config in database so it can be changed without re-deploying.
+
+The values are cached using Rails.cache to avoid performance overhead.
