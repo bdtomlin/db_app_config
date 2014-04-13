@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = DbAppConfig::VERSION
   s.authors     = ["Bryan Tomlin"]
   s.email       = ["bdtomlin@gmail.com"]
-  s.homepage    = "bryantomlin.com"
+  s.homepage    = "https://github.com/bdtomlin"
   s.summary     = "Store app config in database"
   s.description = "Allows you to store your app config in the database so it can be changed without re-deploying. Values are cached with Rails.cache"
 
