@@ -48,3 +48,18 @@ describe DbAppConfig, ".get_all" do
     expect(AppConfig.get_all).to eq hash
   end
 end
+
+describe DbAppConfig, ".destroy" do
+  it "removes the item from the config" do
+    AppConfig.my_name = 'some name'
+    AppConfig.destroy :my_name
+    expect(AppConfig.my_name).to be_nil
+  end
+
+  it "updates the cache" do
+    AppConfig.my_name = 'some name'
+    AppConfig.get_all
+    AppConfig.destroy :my_name
+    expect(AppConfig.my_name).to be_nil
+  end
+end
