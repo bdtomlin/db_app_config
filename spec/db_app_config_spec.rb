@@ -22,6 +22,18 @@ describe DbAppConfig do
     AppConfig.my_name2 = 'some name2'
     expect(AppConfig.my_name2).to eq 'some name2'
   end
+
+  it "allows changing of the value" do
+    AppConfig.my_name = 'some name'
+    AppConfig.my_name = 'some new name'
+    expect(AppConfig.my_name).to eq 'some new name'
+  end
+
+  it "changing of the value reloads the cache" do
+    AppConfig.my_name = 'some name'
+    AppConfig.my_name = 'some new name'
+    expect(AppConfig.my_name).to eq 'some new name'
+  end
 end
 
 describe DbAppConfig, ".get_all" do
