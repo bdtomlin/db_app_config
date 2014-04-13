@@ -3,3 +3,9 @@
 Super simple project to store app config in database so it can be changed without re-deploying.
 
 The values are cached using Rails.cache to avoid performance overhead.
+
+To install add gem 'db_app_config' to Gemfile
+
+bundle
+
+run rails g db_app_config:install
